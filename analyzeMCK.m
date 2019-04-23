@@ -303,7 +303,7 @@ fprintf(fid,'%2.4e \n',betamat(i).ec50*1e-6);
 
 
 end
-fclose(fid)
+fclose(fid);
 
 
 
