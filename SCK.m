@@ -12,7 +12,6 @@ classdef SCK < handle
         end
 
         function load(data,file,cyclesfile,sheetnum,colrow)
-            % Backward compatibility with old data.mat files
             if isempty(file)
                 file='FC2-1.csv';
             end
@@ -43,21 +42,6 @@ classdef SCK < handle
             data.input.ligandname=ligandname;
             data.input.ligandconcunit=ligandconcunit;
             
-           
-%             cycles
-% 
-%             for i=1:7:length(cycles{1})
-% %                 samplenames{end+1}=cycles{1}{i};
-% %                 ligandname{end+1}=cycles{1}{i+1};
-% %                 ligandconc(end+1)=cycles{1}{i+2:6}-0;
-% 
-%                 data.input((i-1)/7+1).names=cycles{1}{i};
-%                 data.input((i-1)/7+1).ligandname=cycles{1}{i+1};
-%                 data.input((i-1)/7+1).ligandconc=cellfun(@str2num,cycles{1}(i+[2:6]));
-%                 data.input((i-1)/7+1).ligandconcunit=ligandconcunit;
-%             end
-%             
-% 
             data.rawdata=d;
             
         end
